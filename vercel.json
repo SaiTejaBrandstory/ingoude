@@ -36,6 +36,10 @@
       "dest": "/financial-services.html"
     },
     {
+      "src": "/insurance-services",
+      "dest": "/insurance-services.html"
+    },
+    {
       "src": "/public/(.*)",
       "dest": "/public/$1"
     }
