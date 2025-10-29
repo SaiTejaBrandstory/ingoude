@@ -1,0 +1,19 @@
+{
+  "name": "ingoude-technologies",
+  "version": "1.0.0",
+  "description": "Ingoude Technologies website - API-driven insurance technology solutions",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Static site - no build required'",
+    "start": "echo 'Static site - serve index.html'"
+  },
+  "keywords": [
+    "insurance",
+    "technology",
+    "api",
+    "banking",
+    "fintech"
+  ],
+  "author": "Ingoude Technologies",
+  "license": "MIT"
+}
