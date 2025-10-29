@@ -40,6 +40,10 @@
       "dest": "/insurance-services.html"
     },
     {
+      "src": "/contact-us",
+      "dest": "/contact-us.html"
+    },
+    {
       "src": "/public/(.*)",
       "dest": "/public/$1"
     }
