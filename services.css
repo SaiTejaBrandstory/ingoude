@@ -1,0 +1,319 @@
+/* Services Page Styles */
+.services-hero {
+    position: relative;
+    padding-bottom: 80px;
+}
+
+.services-hero-bg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/public/services/services-banner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.banking-services-hero-bg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/public/services/banking-services-banner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.services-hero-text-container {
+    max-width: 920px;
+    padding-top: 100px;
+}
+
+.services-hero-title {
+    font-family: Inter;
+    font-weight: 800;
+    font-size: 54px;
+    line-height: 64px;
+    letter-spacing: 0;
+    color: #000000;
+}
+
+.services-hero-title .bfsi-accent {
+    color: #0369A1;
+}
+
+.services-hero-description {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0;
+    color: #000000CC;
+    max-width: 920px;
+}
+
+
+.service-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    background: rgba(3, 105, 161, 1);
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+    color: white;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 28px;
+    text-decoration: none;
+    gap: 10px;
+}
+
+.service-link:hover {
+    box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.15);
+}
+
+.services .service-icon {
+    width: 56px;
+    height: 56px;
+}
+
+.services .section-subtitle {
+    max-width: 830px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.three-pillar-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #0369A1;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0;
+    border: 1px solid #0369A1;
+    padding: 9px 16px;
+    border-radius:25px;
+    margin-bottom: 20px;
+}
+
+.three-pillar-icon {
+    width: 18px;
+    height: 18px;
+}
+
+/* Services Third Section - 6 Cards, 2 columns, 3 rows */
+.services-third {
+    padding-top: 0 !important;
+}
+
+.services-third .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Services Fourth Section */
+.services-fourth {
+    padding-top: 0 !important;
+}
+
+.services-fourth .service-content {
+    text-align: center;
+}
+
+/* FAQ Section */
+.faq {
+    padding: 0 0 80px 0;
+    background: white;
+}
+
+.faq-container {
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 24px;
+    background: white;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0;
+    color: #000000;
+    transition: background-color 0.2s;
+}
+
+.faq-icon {
+    font-size: 16px;
+    transition: transform 0.2s;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+}
+
+.faq-answer p {
+    padding: 0 24px 24px 24px;
+    margin: 0;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0;
+    color: #00000099;
+}
+
+h3 {
+    color: #000000;
+    font-family: Inter;
+    font-weight: 500 !important;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0;
+}
+
+.service-list {
+    list-style: disc;
+    padding-left: 20px;
+    margin: 16px 0;
+}
+
+.service-list li {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 8px;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 767px) {
+    /* Services Hero Responsive */
+    .services-hero {
+        padding-bottom: 40px;
+    }
+    
+    .services-hero-text-container {
+        padding-top: 40px;
+    }
+    
+    .services-hero-title {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    
+    .services-hero-description {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    
+    /* Services Grid Responsive - 1 column on mobile */
+    .services-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* Services Third Section - 1 column on mobile */
+    .services-third .services-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* Three Pillar Tag Responsive */
+    .three-pillar-tag {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+    
+    .three-pillar-icon {
+        width: 20px;
+        height: 15px;
+    }
+    
+    /* Service Icon Responsive */
+    .services .service-icon {
+        width: 48px;
+        height: 48px;
+    }
+    
+    /* FAQ Responsive */
+    .faq-question {
+        padding: 16px;
+        font-size: 18px;
+        line-height: 24px;
+    }
+    
+    .faq-answer p {
+        padding: 0 16px 16px 16px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    
+    /* CTA Section Responsive */
+    .cta {
+        padding: 40px 0;
+    }
+    
+    .cta-title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    
+    .cta-description {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+    }
+    
+    .cta-btn-primary,
+    .cta-btn-secondary {
+        width: 100%;
+    }
+}

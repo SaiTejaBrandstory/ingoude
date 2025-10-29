@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingoude Technologies - Innovative Technology Solutions</title>
+    <meta name="description" content="Empowering businesses with innovative technology solutions. Discover our features, explore our products, and find the perfect pricing plan for your needs.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="public/ingoude-technologies-logo.svg">
+    <link rel="shortcut icon" href="public/ingoude-technologies-logo.svg">
+    <link rel="apple-touch-icon" href="public/ingoude-technologies-logo.svg">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo-container">
+                <a href="#" class="logo-link">
+                    <img src="public/ingoude-technologies-logo.svg" alt="Ingoude Technologies Logo" class="logo">
+                </a>
+            </div>
+
+            <!-- Desktop Navigation Menu -->
+            <nav class="desktop-nav">
+                <button class="nav-link">Features</button>
+                <button class="nav-link">Products</button>
+                <button class="nav-link">Pricing</button>
+                <button class="nav-link">Resources</button>
+            </nav>
+
+            <!-- Right side - Login and CTA -->
+            <div class="header-buttons">
+                <button class="login-btn">Login</button>
+                <button class="demo-btn">Book a Demo</button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div class="mobile-nav">
+            <nav class="mobile-nav-content">
+                <a href="#" class="mobile-nav-link">Features</a>
+                <a href="#" class="mobile-nav-link">Products</a>
+                <a href="#" class="mobile-nav-link">Pricing</a>
+                <a href="#" class="mobile-nav-link">Resources</a>
+                
+                <!-- Mobile Login and CTA -->
+                <div class="mobile-nav-buttons">
+                    <a href="#" class="mobile-login-btn">Login</a>
+                    <a href="#" class="mobile-demo-btn">Book a Demo</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <!-- Video Container -->
+            <div class="hero-video-container">
+                <video autoplay muted loop playsinline poster="public/hero-banner.webp" class="hero-video">
+                    <source src="public/hero-banner-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <!-- Overlay for better text readability -->
+                <div class="hero-overlay"></div>
+            </div>
+
+            <!-- Content Container - Left Side -->
+            <div class="hero-content">
+                <div class="hero-content-container">
+                    <div class="hero-text-container">
+                        <!-- Main Headline -->
+                        <h1 class="hero-title">
+                            Empower Your<br>
+                            Brokerage with<br>
+                            <span class="hero-title-accent">API-Driven Speed</span><br>
+                            <span class="hero-title-accent">& Simplicity</span>
+                        </h1>
+
+                        <!-- Description -->
+                        <p class="hero-description">
+                            Connect with top UAE insurers, quote in seconds, and<br>
+                            manage clients from one smart platform - built<br>
+                            exclusively for brokers.
+                        </p>
+
+                        <!-- CTA Buttons -->
+                        <div class="hero-buttons">
+                            <!-- Book a Demo Button -->
+                            <button class="hero-demo-btn">
+                                Book a Demo 
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+
+                            <!-- See How It Works Button -->
+                            <button class="hero-how-btn">
+                                See How It Works 
+                                <i class="fa-solid fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services">
+            <div class="services-container">
+                <!-- Section Header -->
+                <div class="section-header">
+                    <h2 class="section-title">Powerful Features Built for Brokers</h2>
+                    <p class="section-subtitle">Everything you need to streamline your insurance brokerage operations in one powerful platform</p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card">
+                        <div class="service-content">
+                            <div class="service-icon-container">
+                                <img src="public/service-1.svg" alt="12+ API-Ready Insurance Products" class="service-icon">
+                            </div>
+                            <h3 class="service-title">12+ API-Ready Insurance Products</h3>
+                            <p class="service-description">Access a wide range of instantly quotable products from auto and health to property and life with seamless insurer integrations</p>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="service-card">
+                        <div class="service-content">
+                            <div class="service-icon-container">
+                                <img src="public/service-2.svg" alt="Smart Comparison Engine" class="service-icon">
+                            </div>
+                            <h3 class="service-title">Smart Comparison Engine</h3>
+                            <p class="service-description">Quote, compare, and bind policies - all on a single screen, no toggling, no delays just intelligent matchmaking</p>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="service-card">
+                        <div class="service-content">
+                            <div class="service-icon-container">
+                                <img src="public/service-3.svg" alt="Built-in CRM" class="service-icon">
+                            </div>
+                            <h3 class="service-title">Built-in CRM</h3>
+                            <p class="service-description">Track leads, follow up with clients, and manage renewals all from the same workspace, Stay organized, stay ahead.</p>
+                        </div>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="service-card">
+                        <div class="service-content">
+                            <div class="service-icon-container">
+                                <img src="public/service-4.svg" alt="Integrated Payment Gateway" class="service-icon">
+                            </div>
+                            <h3 class="service-title">Integrated Payment Gateway</h3>
+                            <p class="service-description">Secure, fast, and reliable payments. clients can pay online instantly, making policy binding frictionless</p>
+                        </div>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div class="service-card">
+                        <div class="service-content">
+                            <div class="service-icon-container">
+                                <img src="public/service-5.svg" alt="Ultra-Fast Lightweight Architecture" class="service-icon">
+                            </div>
+                            <h3 class="service-title">Ultra-Fast Lightweight Architecture</h3>
+                            <p class="service-description">Lightning-fast platform optimized for real time API transactions and multi user teams, no lag, no crash</p>
+                        </div>
+                    </div>
+
+                    <!-- Service 6 -->
+                    <div class="service-card">
+                        <div class="service-content">
+                            <div class="service-icon-container">
+                                <img src="public/service-6.svg" alt="Enterprise-Grade Security" class="service-icon">
+                            </div>
+                            <h3 class="service-title">Enterprise-Grade Security</h3>
+                            <p class="service-description">Bank-level encryption, secure access controls and continuous monitoring to keep your data safe and compliant</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works">
+            <div class="how-it-works-container">
+                <!-- Section Header -->
+                <div class="section-header">
+                    <h2 class="section-title">How It Works</h2>
+                    <p class="section-subtitle">Three simple steps to transform your brokerage operations</p>
+                </div>
+
+                <div class="steps-container">
+                    <!-- Step 1 -->
+                    <div class="step">
+                        <!-- Number Circle -->
+                        <div class="step-number">
+                            <span class="step-number-text">1</span>
+                        </div>
+                        <!-- Dotted Line -->
+                        <div class="step-line"></div>
+                        <!-- Step Title -->
+                        <h3 class="step-title">Sign Up & Connect</h3>
+                        <!-- Step Description -->
+                        <p class="step-description">Get started quickly. No setup fees. Just log in and connect with leading insurers.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="step">
+                        <!-- Number Circle -->
+                        <div class="step-number">
+                            <span class="step-number-text">2</span>
+                        </div>
+                        <!-- Dotted Line -->
+                        <div class="step-line"></div>
+                        <!-- Step Title -->
+                        <h3 class="step-title">Quote, Compare & Sell</h3>
+                        <!-- Step Description -->
+                        <p class="step-description">Use our smart engine to generate quotes and close sales from one dashboard.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="step">
+                        <!-- Number Circle -->
+                        <div class="step-number">
+                            <span class="step-number-text">3</span>
+                        </div>
+                        <!-- Step Title -->
+                        <h3 class="step-title">Manage Everything</h3>
+                        <!-- Step Description -->
+                        <p class="step-description">Track clients, handle renewals, and manage payments - all in one place.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products">
+            <div class="products-container">
+                <!-- Section Header -->
+                <div class="section-header">
+                    <h2 class="section-title">Our Products</h2>
+                    <p class="section-subtitle">Comprehensive coverage across all major insurance categories with instant API access</p>
+                </div>
+
+                <!-- Main Content - Left Text + Right Image -->
+                <div class="products-content">
+                    <!-- Left Arrow Button - Outside Content - Hidden on Mobile -->
+                    <button class="carousel-btn carousel-btn-left" id="prevBtn">
+                        <svg class="carousel-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+
+                    <!-- Right Arrow Button - Outside Content - Hidden on Mobile -->
+                    <button class="carousel-btn carousel-btn-right" id="nextBtn">
+                        <svg class="carousel-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+
+                    <!-- Content Container - Between Arrows -->
+                    <div class="products-inner-content" id="productsSlider">
+                        <!-- Left Content Area -->
+                        <div class="products-text">
+                            <!-- Dynamic Content based on current slide -->
+                            <div id="productInfo">
+                                <h3 class="product-title" id="productTitle">CRM & Sales Performance Dashboard</h3>
+                                
+                                <ul class="product-features" id="productFeatures">
+                                    <li class="product-feature">
+                                        <div class="feature-bullet"></div>
+                                        <span class="feature-text">Manage leads and customer interactions in one place.</span>
+                                    </li>
+                                    <li class="product-feature">
+                                        <div class="feature-bullet"></div>
+                                        <span class="feature-text">Monitor sales, renewals, and revenue in real time.</span>
+                                    </li>
+                                    <li class="product-feature">
+                                        <div class="feature-bullet"></div>
+                                        <span class="feature-text">Visualize data with intuitive charts and reports.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Right Dashboard Image -->
+                        <div class="products-image">
+                            <img id="productImage" src="public/products-1.webp" alt="CRM & Sales Performance Dashboard" class="product-img">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Dots -->
+                <div class="carousel-dots" id="carouselDots">
+                    <button class="carousel-dot active" data-slide="0"></button>
+                    <button class="carousel-dot" data-slide="1"></button>
+                    <button class="carousel-dot" data-slide="2"></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Platform Demo Section -->
+        <section class="platform-demo">
+            <div class="platform-demo-container">
+                <!-- Section Header -->
+                <div class="section-header">
+                    <h2 class="section-title white-text">See the Platform in Action</h2>
+                    <p class="section-subtitle white-text">Experience the speed and simplicity of our modern insurance platform</p>
+                </div>
+
+                <!-- Platform Demo Content -->
+                <div class="demo-content">
+                    <div class="demo-video-container">
+                        <iframe
+                            src="https://www.youtube.com/embed/uTbDkVLb13I"
+                            class="demo-video"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                            title="Platform Demo">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="results">
+            <div class="results-container">
+                <!-- Section Header -->
+                <div class="section-header">
+                    <h2 class="section-title">Results That Speak Volumes</h2>
+                    <p class="section-subtitle">See the impact Ingoude has on insurance brokerages across the UAE</p>
+                </div>
+
+                <!-- Key Metrics Grid -->
+                <div class="metrics-grid">
+                    <!-- First Metric -->
+                    <div class="metric">
+                        <div class="metric-number">12+</div>
+                        <p class="metric-description">API-integrated insurance products</p>
+                    </div>
+
+                    <!-- Second Metric -->
+                    <div class="metric">
+                        <div class="metric-number">2x</div>
+                        <p class="metric-description">Faster quote-to-bind time</p>
+                    </div>
+
+                    <!-- Third Metric -->
+                    <div class="metric">
+                        <div class="metric-number">40%</div>
+                        <p class="metric-description">Increase in policy conversion rates</p>
+                    </div>
+
+                    <!-- Fourth Metric -->
+                    <div class="metric">
+                        <div class="metric-number">100%</div>
+                        <p class="metric-description">Digital client experience</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="cta-container">
+                <!-- Main Heading -->
+                <h2 class="cta-title">Ready to Take Your Brokerage to the Next Level?</h2>
+
+                <!-- Description -->
+                <p class="cta-description">Book a free demo and see Ingoude in action.</p>
+
+                <!-- CTA Buttons -->
+                <div class="cta-buttons">
+                    <!-- Left Button - Schedule Your Demo -->
+                    <button class="cta-btn-primary">Schedule Your Demo</button>
+
+                    <!-- Right Button - Get Started Free -->
+                    <button class="cta-btn-secondary">Get Started Free</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Main Footer Content -->
+            <div class="footer-content">
+                
+                <!-- Column 1 - Company Information -->
+                <div class="footer-column">
+                    <!-- Logo -->
+                    <div class="footer-logo-container">
+                        <a href="#" class="footer-logo-link">
+                            <img src="public/footer-logo.svg" alt="Ingoude Technologies Logo" class="footer-logo">
+                        </a>
+                    </div>
+                    
+                    <!-- Description -->
+                    <p class="footer-description">
+                        Empowering insurance brokers with API-driven technology to quote faster and sell more.
+                    </p>
+                    
+                    <!-- Social Media Icons -->
+                    <div class="footer-social">
+                        <i class="fa-brands fa-linkedin footer-social-icon"></i>
+                        <i class="fa-brands fa-square-x-twitter footer-social-icon"></i>
+                        <i class="fa-brands fa-square-facebook footer-social-icon"></i>
+                    </div>
+                </div>
+
+                <!-- Column 2 - Quick Links -->
+                <div class="footer-column">
+                    <h3 class="footer-column-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><button class="footer-link">Home</button></li>
+                        <li><button class="footer-link">Features</button></li>
+                        <li><button class="footer-link">Products</button></li>
+                        <li><button class="footer-link">Pricing</button></li>
+                        <li><button class="footer-link">Resources</button></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 - Contact -->
+                <div class="footer-column">
+                    <h3 class="footer-column-title">Contact</h3>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <i class="fa-solid fa-envelope contact-icon"></i>
+                            <span class="contact-text">hello@ingoude.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone contact-icon"></i>
+                            <span class="contact-text">+971 50 123 4567</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 4 - Address -->
+                <div class="footer-column">
+                    <h3 class="footer-column-title">Address</h3>
+                    <p class="footer-address">
+                        Office 1205, Business Bay,<br>
+                        Dubai, UAE
+                    </p>
+                </div>
+            </div>
+
+            <!-- Copyright Section -->
+            <div class="footer-copyright">
+                <div class="copyright-content">
+                    <p class="copyright-text">
+                        © 2025 Ingoude Technologies. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
