@@ -32,6 +32,10 @@
       "dest": "/services.html"
     },
     {
+      "src": "/financial-services",
+      "dest": "/financial-services.html"
+    },
+    {
       "src": "/public/(.*)",
       "dest": "/public/$1"
     }
