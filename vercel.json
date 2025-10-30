@@ -1,38 +1,13 @@
 {
   "version": 2,
-  "routes": [
-    {
-      "src": "/",
-      "dest": "/index.html"
-    },
-    {
-      "src": "/banking-services",
-      "dest": "/banking-services.html"
-    },
-    {
-      "src": "/services",
-      "dest": "/services.html"
-    },
-    {
-      "src": "/financial-services",
-      "dest": "/financial-services.html"
-    },
-    {
-      "src": "/insurance-services",
-      "dest": "/insurance-services.html"
-    },
-    {
-      "src": "/contact-us",
-      "dest": "/contact-us.html"
-    },
-    {
-      "src": "/conversalq",
-      "dest": "/conversalq.html"
-    },
-    {
-      "src": "/public/(.*)",
-      "dest": "/public/$1"
-    }
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/banking-services", "destination": "/banking-services.html" },
+    { "source": "/services", "destination": "/services.html" },
+    { "source": "/financial-services", "destination": "/financial-services.html" },
+    { "source": "/insurance-services", "destination": "/insurance-services.html" },
+    { "source": "/contact-us", "destination": "/contact-us.html" },
+    { "source": "/conversalq", "destination": "/conversalq.html" }
   ],
   "headers": [
     {
