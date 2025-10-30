@@ -66,8 +66,8 @@ function initializeMobileMenu() {
     if (mobileMenuBtn && mobileNav) {
         mobileMenuBtn.addEventListener('click', toggleMobileMenu);
         
-        // Close mobile menu when clicking on links
-        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link, .mobile-login-btn, .mobile-demo-btn');
+        // Close mobile menu only when clicking actual navigation links (not summaries/carets)
+        const mobileNavLinks = document.querySelectorAll('.mobile-submenu-link, .mobile-login-btn, .mobile-demo-btn, a.mobile-services-link[href]');
         mobileNavLinks.forEach(link => {
             link.addEventListener('click', () => {
                 closeMobileMenu();
@@ -354,6 +354,7 @@ function setupEventListeners() {
         if (caretBtn) {
             e.preventDefault();
             e.stopPropagation();
+            if (typeof e.stopImmediatePropagation === 'function') e.stopImmediatePropagation();
             const detailsEl = caretBtn.closest('details.mobile-dropdown');
             if (detailsEl) {
                 detailsEl.open = !detailsEl.open;
