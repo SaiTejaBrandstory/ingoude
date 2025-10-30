@@ -55,6 +55,7 @@ function initializeWebsite() {
     initializeProductsCarousel();
     preloadImages();
     setupEventListeners();
+    initializeContactModal();
 }
 
 // Mobile Menu Functionality
@@ -298,8 +299,7 @@ function onTouchEnd() {
 function setupEventListeners() {
     // Prevent default action for all buttons that don't have specific functionality
     const preventDefaultButtons = document.querySelectorAll(
-        '.nav-link, .login-btn, .demo-btn, .hero-demo-btn, .hero-how-btn, ' +
-        '.cta-btn-primary, .cta-btn-secondary, .footer-link'
+        '.login-btn, .demo-btn, .hero-demo-btn, .hero-how-btn, .cta-btn-primary, .cta-btn-secondary, a[href="#"]'
     );
     
     preventDefaultButtons.forEach(button => {
@@ -347,6 +347,80 @@ function setupEventListeners() {
             }
         });
     });
+
+    // Mobile Services dropdown: caret toggles submenu; text navigates
+    document.addEventListener('click', (e) => {
+        const caretBtn = e.target.closest('.mobile-caret-btn');
+        if (caretBtn) {
+            e.preventDefault();
+            e.stopPropagation();
+            const detailsEl = caretBtn.closest('details.mobile-dropdown');
+            if (detailsEl) {
+                detailsEl.open = !detailsEl.open;
+            }
+        }
+    });
+}
+
+// Contact Modal
+function initializeContactModal() {
+    const openBtn = document.getElementById('ctaContactBtn');
+    const modal = document.getElementById('contactModal');
+    const closeBtn = modal ? modal.querySelector('.modal-close') : null;
+    const overlay = modal;
+
+    if (!openBtn || !modal) return;
+
+    const openModal = () => {
+        modal.classList.add('open');
+        document.body.classList.add('modal-open');
+        const firstInput = document.getElementById('ctaFirstName');
+        if (firstInput) {
+            setTimeout(() => firstInput.focus(), 0);
+        }
+    };
+
+    const closeModal = () => {
+        modal.classList.remove('open');
+        document.body.classList.remove('modal-open');
+        openBtn.focus();
+    };
+
+    openBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openModal();
+    });
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            closeModal();
+        });
+    }
+
+    if (overlay) {
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) {
+                closeModal();
+            }
+        });
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('open')) {
+            closeModal();
+        }
+    });
+
+    const form = document.getElementById('ctaContactForm');
+    if (form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // For now, just close and log. Integrate with backend later.
+            console.log('CTA Contact form submitted');
+            closeModal();
+        });
+    }
 }
 
 // Keyboard navigation for carousel
@@ -413,6 +487,13 @@ function initFAQ() {
     
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        if (answer) {
+            // Ensure answers start collapsed for smooth transitions
+            answer.style.maxHeight = '0px';
+            answer.style.overflow = 'hidden';
+            answer.style.transition = 'max-height 300ms ease';
+        }
         
         question.addEventListener('click', () => {
             const isActive = item.classList.contains('active');
@@ -421,14 +502,25 @@ function initFAQ() {
             faqItems.forEach(otherItem => {
                 if (otherItem !== item) {
                     otherItem.classList.remove('active');
+                    const otherAnswer = otherItem.querySelector('.faq-answer');
+                    if (otherAnswer) {
+                        otherAnswer.style.maxHeight = '0px';
+                    }
                 }
             });
             
             // Toggle current item
             if (isActive) {
                 item.classList.remove('active');
+                if (answer) {
+                    answer.style.maxHeight = '0px';
+                }
             } else {
                 item.classList.add('active');
+                if (answer) {
+                    // Set to scrollHeight for smooth open
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
             }
         });
     });

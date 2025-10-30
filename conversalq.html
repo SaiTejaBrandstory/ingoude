@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConversalQ - Ingoude Technologies</title>
+    <meta name="description" content="ConversalQ - Ingoude Technologies solutions and services.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="public/ingoude-technologies-logo.svg">
+    <link rel="shortcut icon" href="public/ingoude-technologies-logo.svg">
+    <link rel="apple-touch-icon" href="public/ingoude-technologies-logo.svg">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="services.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo-container">
+                <a href="index.html" class="logo-link">
+                    <img src="public/ingoude-technologies-logo.svg" alt="Ingoude Technologies Logo" class="logo">
+                </a>
+            </div>
+
+            <!-- Desktop Navigation Menu -->
+            <nav class="desktop-nav">
+                <span class="nav-link">Features</span>
+                <div class="nav-dropdown">
+                    <a href="services.html" class="nav-link nav-dropdown-toggle">Services <i class="fa-solid fa-chevron-down" style="font-size: 12px;"></i></a>
+                    <div class="nav-dropdown-menu">
+                        <a href="banking-services.html" class="nav-dropdown-item">Banking</a>
+                        <a href="financial-services.html" class="nav-dropdown-item">Financial</a>
+                        <a href="insurance-services.html" class="nav-dropdown-item">Insurance</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <span class="nav-link nav-dropdown-toggle" style="cursor:pointer;">Products <i class="fa-solid fa-chevron-down" style="font-size: 12px;"></i></span>
+                    <div class="nav-dropdown-menu">
+                        <a href="conversalq.html" class="nav-dropdown-item">ConversaIQ</a>
+                    </div>
+                </div>
+                <span class="nav-link">Pricing</span>
+                <span class="nav-link">Resources</span>
+                <a href="contact-us.html" class="nav-link">Contact Us</a>
+            </nav>
+
+            <!-- Right side - Login and CTA -->
+            <div class="header-buttons">
+                <button class="login-btn">Login</button>
+                <button class="demo-btn">Book a Demo</button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div class="mobile-nav">
+            <nav class="mobile-nav-content">
+                <span class="mobile-nav-link">Features</span>
+                <details class="mobile-dropdown">
+                    <summary class="mobile-nav-link mobile-services-summary">
+                        <a href="services.html" class="mobile-services-link">Services</a>
+                        <button type="button" class="mobile-caret-btn" aria-label="Toggle Services submenu">
+                            <i class="fa-solid fa-chevron-down mobile-caret"></i>
+                        </button>
+                    </summary>
+                    <div class="mobile-submenu">
+                        <a href="banking-services.html" class="mobile-submenu-link">Banking</a>
+                        <a href="financial-services.html" class="mobile-submenu-link">Financial</a>
+                        <a href="insurance-services.html" class="mobile-submenu-link">Insurance</a>
+                    </div>
+                </details>
+                <details class="mobile-dropdown">
+                    <summary class="mobile-nav-link mobile-services-summary">
+                        <span class="mobile-services-link">Products</span>
+                        <button type="button" class="mobile-caret-btn" aria-label="Toggle Products submenu">
+                            <i class="fa-solid fa-chevron-down mobile-caret"></i>
+                        </button>
+                    </summary>
+                    <div class="mobile-submenu">
+                        <a href="conversalq.html" class="mobile-submenu-link">ConversaIQ</a>
+                    </div>
+                </details>
+                <span class="mobile-nav-link">Pricing</span>
+                <span class="mobile-nav-link">Resources</span>
+                <a href="contact-us.html" class="mobile-nav-link">Contact Us</a>
+                
+                <!-- Mobile Login and CTA -->
+                <div class="mobile-nav-buttons">
+                    <a href="#" class="mobile-login-btn">Login</a>
+                    <a href="#" class="mobile-demo-btn">Book a Demo</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero conversalq-hero">
+            <!-- Two Column Layout: Left Content, Right Image -->
+            <div class="conversalq-hero-content-wrapper">
+                <!-- Left Half - Content -->
+                <div class="hero-content">
+                    <div class="hero-content-container">
+                        <div class="hero-text-container">
+                            <!-- AI-Powered Banner -->
+                            <div class="conversalq-banner">
+                                <div class="conversalq-banner-icon">
+                                    <img src="public/conversalq/ai-powered-logo.svg" alt="AI Powered" class="conversalq-banner-icon-img">
+                                </div>
+                                <span class="conversalq-banner-text">AI-Powered WhatsApp Analytics</span>
+                            </div>
+                            
+                            <!-- Main Headline -->
+                            <h1 class="hero-title">
+                                ConversaIQ - Transform Every <span class="conversalq-accent">WhatsApp Conversation</span> Into Actionable <span class="conversalq-accent">Business Intelligence</span>
+                            </h1>
+
+                            <!-- Description -->
+                            <p class="hero-description">
+                                Harness AI and machine learning to analyze 100% of your customer interactions. Turn insights into action and customers into lifelong advocates.
+                            </p>
+
+                            <!-- CTA Buttons -->
+                            <div class="hero-buttons">
+                                <!-- Start free Trial Button -->
+                                <button class="hero-demo-btn">
+                                    Start free Trial
+                                </button>
+
+                                <!-- Pricing Button -->
+                                <button class="hero-how-btn">
+                                    Pricing
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Half - Image -->
+                <div class="conversalq-hero-image-container">
+                    <img src="public/conversalq/conversalq-banner.webp" alt="ConversaIQ" class="conversalq-hero-image">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Understanding Section -->
+        <section class="conversalq-understanding">
+            <div class="conversalq-understanding-container">
+                <div class="section-header">
+                    <h2 class="section-title">Understanding Your Customers Has Never Been This Powerful</h2>
+                    <p class="section-subtitle">
+                        Millions of customer interactions happen daily on WhatsApp. Most go unanalyzed—leading to missed opportunities,
+                        unnoticed frustrations, and uninformed decisions.
+                    </p>
+                </div>
+
+                <div class="understanding-grid">
+                    <!-- Problem Card -->
+                    <div class="understanding-card problem-card">
+                        <h3 class="understanding-card-title">The Problem</h3>
+                        <ul class="understanding-list">
+                            <li class="understanding-list-item">
+                                <i class="fa-solid fa-triangle-exclamation list-icon danger"></i>
+                                <span>Traditional analysis only samples a small portion</span>
+                            </li>
+                            <li class="understanding-list-item">
+                                <i class="fa-solid fa-eye-slash list-icon danger"></i>
+                                <span>Key customer frustrations go unnoticed</span>
+                            </li>
+                            <li class="understanding-list-item">
+                                <i class="fa-solid fa-clock list-icon danger"></i>
+                                <span>Manual review is slow and inconsistent</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Solution Card -->
+                    <div class="understanding-card solution-card">
+                        <h3 class="understanding-card-title">The ConversaIQ Solution</h3>
+                        <p class="understanding-solution-text">
+                            ConversaIQ automatically processes every WhatsApp conversation across support, sales, marketing, and customer
+                            messaging—to uncover sentiment, patterns, trends, and revenue opportunities that manual reviews miss.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Service Challenge Section -->
+        <section class="conversalq-challenge">
+            <div class="challenge-container">
+                <div class="section-header">
+                    <h2 class="section-title">The Customer Service Challenge</h2>
+                    <p class="section-subtitle">Contact centers handle thousands of daily interactions, but traditional methods leave critical insights undiscovered.</p>
+                </div>
+
+                <div class="challenge-grid">
+                    <!-- Card 1 -->
+                    <div class="challenge-card">
+                        <div class="challenge-icon-wrap">
+                            <i class="fa-solid fa-chart-pie challenge-icon"></i>
+                        </div>
+                        <h3 class="challenge-card-title">Limited Sampling</h3>
+                        <p class="challenge-card-text">Only 5-10% of conversations get analyzed, missing critical patterns and trends.</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="challenge-card">
+                        <div class="challenge-icon-wrap">
+                            <i class="fa-solid fa-eye-slash challenge-icon"></i>
+                        </div>
+                        <h3 class="challenge-card-title">Blind Spots</h3>
+                        <p class="challenge-card-text">Key customer frustrations and escalation triggers remain unnoticed.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="challenge-card">
+                        <div class="challenge-icon-wrap">
+                            <i class="fa-solid fa-clock challenge-icon"></i>
+                        </div>
+                        <h3 class="challenge-card-title">Slow Analysis</h3>
+                        <p class="challenge-card-text">Manual review takes weeks, making insights outdated before action can be taken.</p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="challenge-card">
+                        <div class="challenge-icon-wrap">
+                            <i class="fa-solid fa-user-slash challenge-icon"></i>
+                        </div>
+                        <h3 class="challenge-card-title">Human Bias</h3>
+                        <p class="challenge-card-text">Inconsistent and subjective analysis leads to unreliable insights.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ConversaIQ Solution Section -->
+        <section class="conversalq-solution">
+            <div class="solution-container">
+                <div class="section-header">
+                    <h2 class="section-title">The ConversaIQ Solution</h2>
+                    <p class="section-subtitle">Transform every customer interaction into actionable intelligence with our comprehensive AI-powered platform.</p>
+                </div>
+
+                <div class="solution-grid">
+                    <!-- Left Column -->
+                    <div class="solution-column">
+                        <div class="solution-item">
+                            <div class="solution-icon-wrap"><i class="fa-solid fa-magnifying-glass solution-icon"></i></div>
+                            <div class="solution-text">
+                                <h3 class="solution-item-title">100% Coverage</h3>
+                                <p class="solution-item-desc">Analyzes every conversation—no blind spots or sampling. Get complete visibility into all customer interactions.</p>
+                            </div>
+                        </div>
+
+                        <div class="solution-item">
+                            <div class="solution-icon-wrap"><i class="fa-solid fa-brain solution-icon"></i></div>
+                            <div class="solution-text">
+                                <h3 class="solution-item-title">AI-Powered Understanding</h3>
+                                <p class="solution-item-desc">Detects sentiment, trends, escalations, and upsell opportunities with advanced machine learning.</p>
+                            </div>
+                        </div>
+
+                        <div class="solution-item">
+                            <div class="solution-icon-wrap"><i class="fa-solid fa-bolt solution-icon"></i></div>
+                            <div class="solution-text">
+                                <h3 class="solution-item-title">Real-Time Insights</h3>
+                                <p class="solution-item-desc">Insights delivered as conversations happen, not weeks later. Act on intelligence immediately.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="solution-column">
+                        <div class="solution-item">
+                            <div class="solution-icon-wrap"><i class="fa-solid fa-chart-bar solution-icon"></i></div>
+                            <div class="solution-text">
+                                <h3 class="solution-item-title">Actionable Dashboards</h3>
+                                <p class="solution-item-desc">Clear visual analytics showing what to fix, improve, or celebrate. Turn data into decisions.</p>
+                            </div>
+                        </div>
+
+                        <div class="solution-item">
+                            <div class="solution-icon-wrap"><i class="fa-solid fa-record-vinyl solution-icon"></i></div>
+                            <div class="solution-text">
+                                <h3 class="solution-item-title">Beyond Support</h3>
+                                <p class="solution-item-desc">Analyze conversations across sales, support, marketing, and the full customer journey.</p>
+                            </div>
+                        </div>
+
+                        <div class="solution-item">
+                            <div class="solution-icon-wrap"><i class="fa-solid fa-gears solution-icon"></i></div>
+                            <div class="solution-text">
+                                <h3 class="solution-item-title">Seamless Integration</h3>
+                                <p class="solution-item-desc">Connects with your existing tools and workflows. No disruption, just enhancement.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comprehensive Feature Suite Section -->
+        <section class="conversalq-feature-suite">
+            <div class="feature-suite-container">
+                <div class="section-header">
+                    <h2 class="section-title">Comprehensive Feature Suite</h2>
+                    <p class="section-subtitle">Everything you need to transform customer conversations into business intelligence and actionable insights.</p>
+                </div>
+
+                <div class="feature-grid">
+                    <!-- Card 1 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-wrap"><i class="fa-solid fa-brain feature-icon"></i></div>
+                        <h3 class="feature-title">Conversation Intelligence</h3>
+                        <ul class="feature-list">
+                            <li>Sentiment Detection</li>
+                            <li>Topic Clustering</li>
+                            <li>Trend Identification</li>
+                            <li>Customer Effort Scoring</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-wrap"><i class="fa-solid fa-robot feature-icon"></i></div>
+                        <h3 class="feature-title">Intelligent Automation</h3>
+                        <ul class="feature-list">
+                            <li>Auto-Categorization & Routing</li>
+                            <li>Priority Issue Detection</li>
+                            <li>Quality Scoring for Agents</li>
+                            <li>Compliance Monitoring</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-wrap"><i class="fa-solid fa-chart-line feature-icon"></i></div>
+                        <h3 class="feature-title">Business Intelligence</h3>
+                        <ul class="feature-list">
+                            <li>Customer Journey Mapping</li>
+                            <li>Agent Performance Analytics</li>
+                            <li>Resolution Time Tracking</li>
+                            <li>CSAT Prediction</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-wrap"><i class="fa-solid fa-plug feature-icon"></i></div>
+                        <h3 class="feature-title">Seamless Integration</h3>
+                        <ul class="feature-list">
+                            <li>WhatsApp Business API</li>
+                            <li>CRM (Salesforce, HubSpot)</li>
+                            <li>Contact Center Platforms</li>
+                            <li>BI Tools (Power BI, Tableau)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Analytics Dashboard Section -->
+        <section class="conversalq-analytics">
+            <div class="analytics-container">
+                <div class="analytics-card">
+                    <div class="analytics-grid">
+                    <!-- Left: Text and Metrics -->
+                    <div class="analytics-left">
+                        <h2 class="analytics-title">Advanced Analytics Dashboard</h2>
+                        <p class="analytics-description">Get a comprehensive view of all your customer interactions with our intuitive dashboard. Monitor trends, track performance, and identify opportunities in real-time.</p>
+
+                        <div class="analytics-metrics">
+                            <div class="metric-item">
+                                <div class="metric-number">100%</div>
+                                <div class="metric-label">Conversation Coverage</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-number">87%</div>
+                                <div class="metric-label">Sentiment Accuracy</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-number">3x</div>
+                                <div class="metric-label">Faster Insights</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-number">24/7</div>
+                                <div class="metric-label">Real-time Monitoring</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Image -->
+                    <div class="analytics-right">
+                        <div class="analytics-image-wrap">
+                            <img src="public/conversalq/advanced-analytics-dashboard.webp" alt="Advanced Analytics Dashboard" class="analytics-image">
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Real Results Section -->
+        <section class="conversalq-results">
+            <div class="results-container">
+                <div class="section-header">
+                    <h2 class="section-title">Real Results Across Every Role</h2>
+                    <p class="section-subtitle">See how ConversaIQ transforms business outcomes for different teams and use cases.</p>
+                </div>
+
+                <div class="results-list">
+                    <!-- Row 1 -->
+                    <div class="result-item">
+                        <div class="result-role">
+                            <div class="result-icon"><i class="fa-solid fa-headset"></i></div>
+                            <div class="result-role-title">Customer Service Leaders</div>
+                        </div>
+                        <div class="result-col">
+                            <div class="result-label">Challenge</div>
+                            <div class="result-text">Hard to monitor conversation quality at scale</div>
+                        </div>
+                        <div class="result-col">
+                            <div class="result-label">Solution</div>
+                            <div class="result-text">Auto-scores every interaction and flags training needs</div>
+                        </div>
+                        <div class="result-col">
+                            <div class="result-label">Result</div>
+                            <div class="result-success">35% increase in CSAT in 90 days</div>
+                        </div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="result-item">
+                        <div class="result-role">
+                            <div class="result-icon"><i class="fa-solid fa-chart-bar"></i></div>
+                            <div class="result-role-title">Business Analysts</div>
+                        </div>
+                        <div class="result-col">
+                            <div class="result-label">Challenge</div>
+                            <div class="result-text">Rising churn with unknown reasons</div>
+                        </div>
+                        <div class="result-col">
+                            <div class="result-label">Solution</div>
+                            <div class="result-text">AI finds patterns in unhappy customer conversations</div>
+                        </div>
+                        <div class="result-col">
+                            <div class="result-label">Result</div>
+                            <div class="result-success">22% reduction in churn</div>
+                        </div>
+                    </div>
+
+                    <!-- Row 3 -->
+                    <div class="result-item">
+                        <div class="result-role">
+                            <div class="result-icon"><i class="fa-solid fa-gears"></i></div>
+                            <div class="result-role-title">Operations Managers</div>
+                        </div>
+                        <div class="result-col">
+                            <div class="result-label">Challenge</div>
+                            <div class="result-text">Long resolution times and delays</div>
+                        </div>
+                        <div class="result-col">
+                            <div class="result-label">Solution</div>
+                            <div class="result-text">Maps conversation flows to identify bottlenecks</div>
+                        </div>
+                        <div class="result-col">
+                            <div class="result-label">Result</div>
+                            <div class="result-success">40% reduction in handling time</div>
+                        </div>
+                    </div>
+
+                    <!-- Row 4 -->
+                    <div class="result-item">
+                        <div class="result-role">
+                            <div class="result-icon"><i class="fa-solid fa-bullhorn"></i></div>
+                            <div class="result-role-title">Marketing Teams</div>
+                        </div>
+                        <div class="result-col">
+                            <div class="result-label">Challenge</div>
+                            <div class="result-text">Messaging disconnected from customer needs</div>
+                        </div>
+                        <div class="result-col">
+                            <div class="result-label">Solution</div>
+                            <div class="result-text">AI analyzes real customer language and problems</div>
+                        </div>
+                        <div class="result-col">
+                            <div class="result-label">Result</div>
+                            <div class="result-success">28% increase in conversions</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="conversalq-pricing">
+            <div class="pricing-container">
+                <div class="pricing-header">
+                    <h2 class="pricing-title">Simple, Transparent Pricing</h2>
+                    <p class="pricing-subtitle">Choose the plan that fits your business needs. All plans include our core AI-powered conversation analysis features.</p>
+                </div>
+                <div class="pricing-grid">
+                    <!-- Starter -->
+                    <div class="pricing-card">
+                        <div class="pricing-card-header">
+                            <div class="pricing-card-title">Starter</div>
+                            <div class="pricing-card-desc">Perfect for small teams getting started</div>
+                        </div>
+                        <div class="pricing-card-price">$99</div>
+                        <div class="pricing-card-period">per month</div>
+                        <ul class="pricing-list">
+                            <li><i class="fa-solid fa-check pricing-check"></i> Up to 1,000 conversations/month</li>
+                            <li><i class="fa-solid fa-check pricing-check"></i> Basic sentiment analysis</li>
+                            <li><i class="fa-solid fa-check pricing-check"></i> Real-time insights</li>
+                            <li><i class="fa-solid fa-check pricing-check"></i> Email support</li>
+                            <li><i class="fa-solid fa-check pricing-check"></i> Basic integrations</li>
+                        </ul>
+                        <button class="pricing-btn">Choose Plan</button>
+                    </div>
+                    <!-- Professional -->
+                    <div class="pricing-card popular">
+                        <div class="pricing-popular">Most Popular</div>
+                        <div class="pricing-card-header">
+                            <div class="pricing-card-title">Professional</div>
+                            <div class="pricing-card-desc">Ideal for growing businesses</div>
+                        </div>
+                        <div class="pricing-card-price">$299</div>
+                        <div class="pricing-card-period">per month</div>
+                        <ul class="pricing-list">
+                            <li><i class="fa-solid fa-check pricing-check"></i> Up to 10,000 conversations/month</li>
+                            <li><i class="fa-solid fa-check pricing-check"></i> Advanced AI analytics</li>
+                            <li><i class="fa-solid fa-check pricing-check"></i> Custom dashboards</li>
+                            <li><i class="fa-solid fa-check pricing-check"></i> Priority support</li>
+                            <li><i class="fa-solid fa-check pricing-check"></i> Advanced integrations</li>
+                            <li><i class="fa-solid fa-check pricing-check"></i> Team collaboration tools</li>
+                        </ul>
+                        <button class="pricing-btn">Choose Plan</button>
+                    </div>
+                    <!-- Enterprise -->
+                    <div class="pricing-card">
+                        <div class="pricing-card-header">
+                            <div class="pricing-card-title">Enterprise</div>
+                            <div class="pricing-card-desc">For large-scale operations</div>
+                        </div>
+                        <div class="pricing-card-price">Custom</div>
+                        <div class="pricing-card-period">pricing</div>
+                        <ul class="pricing-list">
+                            <li><i class="fa-solid fa-check pricing-check"></i> Unlimited conversations</li>
+                            <li><i class="fa-solid fa-check pricing-check"></i> Custom AI models</li>
+                            <li><i class="fa-solid fa-check pricing-check"></i> White-label options</li>
+                            <li><i class="fa-solid fa-check pricing-check"></i> 24/7 dedicated support</li>
+                            <li><i class="fa-solid fa-check pricing-check"></i> Custom integrations</li>
+                            <li><i class="fa-solid fa-check pricing-check"></i> On-premise deployment</li>
+                        </ul>
+                        <button class="pricing-btn">Choose Plan</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq">
+            <div class="faq-container">
+                <div class="section-header">
+                    <h2 class="section-title">FAQ</h2>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How is ConversaIQ different from traditional conversation analytics?</span>
+                            <i class="fa-solid fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Traditional tools sample 5-10% of conversations due to cost and complexity. ConversaIQ's AI analyzes 100% automatically, ensuring no insight is missed.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Does it work with languages other than English?</span>
+                            <i class="fa-solid fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! ConversaIQ supports 50+ languages with the same accuracy and depth of analysis.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How quickly can we get started?</span>
+                            <i class="fa-solid fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Most customers are analyzing conversations within 2 weeks of contract signing. Implementation includes integration, training, and customization.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What happens to our customer data?</span>
+                            <i class="fa-solid fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Your data is encrypted end-to-end, stored in your chosen region, and never used to train models for other customers. We're GDPR compliant and SOC 2 Type II certified.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Can we analyze conversations from multiple channels?</span>
+                            <i class="fa-solid fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Currently, ConversaIQ specializes in WhatsApp. Multi-channel support is on our roadmap for 2025.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Do we need technical expertise to use it?</span>
+                            <i class="fa-solid fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>No! Our interface is designed for business users. If you can use Excel or PowerPoint, you can use ConversaIQ.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="cta-container">
+                <h2 class="cta-title">Ready to Transform Your Customer Intelligence?</h2>
+                <p class="cta-description">Join hundreds of companies already using ConversaIQ to turn every customer conversation into actionable business intelligence.</p>
+                <div class="cta-buttons">
+                    <button class="cta-btn-primary">Schedule Your Demo</button>
+                    <button id="ctaContactBtn" class="cta-btn-secondary">Contact Us</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Modal -->
+        <div id="contactModal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+            <div class="modal-content" role="document">
+                <div class="modal-header">
+                    <h3 class="modal-title">Send us a Message</h3>
+                    <button class="modal-close" aria-label="Close contact form">&times;</button>
+                </div>
+                <p class="modal-subtitle">Fill out the form below and we'll get back to you</p>
+                <form class="contact-form" id="ctaContactForm" autocomplete="off">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ctaFirstName" class="form-label">First Name <span class="required">*</span></label>
+                            <input type="text" id="ctaFirstName" name="firstName" class="form-input" placeholder="Enter your first name" autocomplete="given-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ctaLastName" class="form-label">Last Name <span class="required">*</span></label>
+                            <input type="text" id="ctaLastName" name="lastName" class="form-input" placeholder="Enter your last name" autocomplete="family-name" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ctaEmail" class="form-label">Email Address <span class="required">*</span></label>
+                            <input type="email" id="ctaEmail" name="email" class="form-input" placeholder="Enter your email address" autocomplete="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ctaPhone" class="form-label">Phone Number</label>
+                            <input type="tel" id="ctaPhone" name="phone" class="form-input" placeholder="+971 50 123 4567" autocomplete="tel">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ctaCompany" class="form-label">Company Name</label>
+                            <input type="text" id="ctaCompany" name="company" class="form-input" placeholder="Enter your company name" autocomplete="organization">
+                        </div>
+                        <div class="form-group">
+                            <label for="ctaHelpType" class="form-label">How can we help you? <span class="required">*</span></label>
+                            <select id="ctaHelpType" name="helpType" class="form-select" required>
+                                <option value="">Select an option</option>
+                                <option value="demo">Request a Demo</option>
+                                <option value="support">Technical Support</option>
+                                <option value="sales">Sales Inquiry</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ctaMessage" class="form-label">Message <span class="required">*</span></label>
+                        <textarea id="ctaMessage" name="message" class="form-textarea" rows="6" placeholder="Tell us more about your requirements..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit-btn">
+                        Send Message
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Main Footer Content -->
+            <div class="footer-content">
+                
+                <!-- Column 1 - Company Information -->
+                <div class="footer-column">
+                    <!-- Logo -->
+                    <div class="footer-logo-container">
+                        <a href="index.html" class="footer-logo-link">
+                            <img src="public/footer-logo.svg" alt="Ingoude Technologies Logo" class="footer-logo">
+                        </a>
+                    </div>
+                    
+                    <!-- Description -->
+                    <p class="footer-description">
+                        Empowering insurance brokers with API-driven technology to quote faster and sell more.
+                    </p>
+                    
+                    <!-- Social Media Icons -->
+                    <div class="footer-social">
+                        <i class="fa-brands fa-linkedin footer-social-icon"></i>
+                        <i class="fa-brands fa-square-x-twitter footer-social-icon"></i>
+                        <i class="fa-brands fa-square-facebook footer-social-icon"></i>
+                    </div>
+                </div>
+
+                <!-- Column 2 - Quick Links -->
+                <div class="footer-column">
+                    <h3 class="footer-column-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="index.html" class="footer-link">Features</a></li>
+                        <li><a href="index.html" class="footer-link">Products</a></li>
+                        <li><a href="index.html" class="footer-link">Pricing</a></li>
+                        <li><a href="index.html" class="footer-link">Resources</a></li>
+                        <li><a href="contact-us.html" class="footer-link">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 - Contact -->
+                <div class="footer-column">
+                    <h3 class="footer-column-title">Contact</h3>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <i class="fa-solid fa-envelope contact-icon"></i>
+                            <span class="contact-text">hello@ingoude.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone contact-icon"></i>
+                            <span class="contact-text">+971 50 123 4567</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 4 - Address -->
+                <div class="footer-column">
+                    <h3 class="footer-column-title">Address</h3>
+                    <p class="footer-address">
+                        Office 1205, Business Bay,<br>
+                        Dubai, UAE
+                    </p>
+                </div>
+            </div>
+
+            <!-- Copyright Section -->
+            <div class="footer-copyright">
+                <div class="copyright-content">
+                    <p class="copyright-text">
+                        © 2025 Ingoude Technologies. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+

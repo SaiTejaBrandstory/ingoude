@@ -36,10 +36,23 @@
 
             <!-- Desktop Navigation Menu -->
             <nav class="desktop-nav">
-                <a href="index.html" class="nav-link">Features</a>
-                <a href="index.html" class="nav-link">Products</a>
-                <a href="index.html" class="nav-link">Pricing</a>
-                <a href="index.html" class="nav-link">Resources</a>
+                <span class="nav-link">Features</span>
+                <div class="nav-dropdown">
+                    <a href="services.html" class="nav-link nav-dropdown-toggle">Services <i class="fa-solid fa-chevron-down" style="font-size: 12px;"></i></a>
+                    <div class="nav-dropdown-menu">
+                        <a href="banking-services.html" class="nav-dropdown-item">Banking</a>
+                        <a href="financial-services.html" class="nav-dropdown-item">Financial</a>
+                        <a href="insurance-services.html" class="nav-dropdown-item">Insurance</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <span class="nav-link nav-dropdown-toggle" style="cursor: pointer;">Products <i class="fa-solid fa-chevron-down" style="font-size: 12px;"></i></span>
+                    <div class="nav-dropdown-menu">
+                        <a href="conversalq.html" class="nav-dropdown-item">ConversaIQ</a>
+                    </div>
+                </div>
+                <span class="nav-link">Pricing</span>
+                <span class="nav-link">Resources</span>
                 <a href="contact-us.html" class="nav-link">Contact Us</a>
             </nav>
 
@@ -60,10 +73,33 @@
         <!-- Mobile Navigation Menu -->
         <div class="mobile-nav">
             <nav class="mobile-nav-content">
-                <a href="index.html" class="mobile-nav-link">Features</a>
-                <a href="index.html" class="mobile-nav-link">Products</a>
-                <a href="index.html" class="mobile-nav-link">Pricing</a>
-                <a href="index.html" class="mobile-nav-link">Resources</a>
+                <span class="mobile-nav-link">Features</span>
+                <details class="mobile-dropdown">
+                    <summary class="mobile-nav-link mobile-services-summary">
+                        <a href="services.html" class="mobile-services-link">Services</a>
+                        <button type="button" class="mobile-caret-btn" aria-label="Toggle Services submenu">
+                            <i class="fa-solid fa-chevron-down mobile-caret"></i>
+                        </button>
+                    </summary>
+                    <div class="mobile-submenu">
+                        <a href="banking-services.html" class="mobile-submenu-link">Banking</a>
+                        <a href="financial-services.html" class="mobile-submenu-link">Financial</a>
+                        <a href="insurance-services.html" class="mobile-submenu-link">Insurance</a>
+                    </div>
+                </details>
+                <details class="mobile-dropdown">
+                    <summary class="mobile-nav-link mobile-services-summary">
+                        <span class="mobile-services-link">Products</span>
+                        <button type="button" class="mobile-caret-btn" aria-label="Toggle Products submenu">
+                            <i class="fa-solid fa-chevron-down mobile-caret"></i>
+                        </button>
+                    </summary>
+                    <div class="mobile-submenu">
+                        <a href="conversalq.html" class="mobile-submenu-link">ConversaIQ</a>
+                    </div>
+                </details>
+                <span class="mobile-nav-link">Pricing</span>
+                <span class="mobile-nav-link">Resources</span>
                 <a href="contact-us.html" class="mobile-nav-link">Contact Us</a>
                 
                 <!-- Mobile Login and CTA -->
