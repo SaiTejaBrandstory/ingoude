@@ -365,16 +365,16 @@ function setupEventListeners() {
 
 // Contact Modal
 function initializeContactModal() {
-    const openBtn = document.getElementById('ctaContactBtn');
     const modal = document.getElementById('contactModal');
     const closeBtn = modal ? modal.querySelector('.modal-close') : null;
     const overlay = modal;
 
-    if (!openBtn || !modal) return;
+    if (!modal) return;
 
     const openModal = () => {
         modal.classList.add('open');
         document.body.classList.add('modal-open');
+        modal.setAttribute('aria-hidden', 'false');
         const firstInput = document.getElementById('ctaFirstName');
         if (firstInput) {
             setTimeout(() => firstInput.focus(), 0);
@@ -384,12 +384,25 @@ function initializeContactModal() {
     const closeModal = () => {
         modal.classList.remove('open');
         document.body.classList.remove('modal-open');
-        openBtn.focus();
+        modal.setAttribute('aria-hidden', 'true');
     };
 
-    openBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        openModal();
+    // Open modal from CTA button
+    const openBtn = document.getElementById('ctaContactBtn');
+    if (openBtn) {
+        openBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal();
+        });
+    }
+
+    // Open modal from all "Choose Plan" buttons (pricing section)
+    const pricingButtons = document.querySelectorAll('.open-contact-modal');
+    pricingButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal();
+        });
     });
 
     if (closeBtn) {
