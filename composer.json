@@ -1,0 +1,14 @@
+{
+    "name": "ingoude-technologies/website",
+    "description": "Ingoude Technologies website with PHPMailer integration",
+    "type": "project",
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ingoude\\": "src/"
+        }
+    }
+}
+

@@ -36,7 +36,6 @@
 
             <!-- Desktop Navigation Menu -->
             <nav class="desktop-nav">
-                <a href="index.html#features" class="nav-link">Features</a>
                 <div class="nav-dropdown">
                     <a href="services.html" class="nav-link nav-dropdown-toggle">Services <i class="fa-solid fa-chevron-down" style="font-size: 12px;"></i></a>
                     <div class="nav-dropdown-menu">
@@ -72,7 +71,6 @@
         <!-- Mobile Navigation Menu -->
         <div class="mobile-nav">
             <nav class="mobile-nav-content">
-                <a href="index.html#features" class="mobile-nav-link">Features</a>
                 <details class="mobile-dropdown">
                     <summary class="mobile-nav-link mobile-services-summary">
                         <a href="services.html" class="mobile-services-link">Services</a>
@@ -459,7 +457,6 @@
                     <h3 class="footer-column-title">Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="index.html" class="footer-link">Home</a></li>
-                        <li><a href="index.html#features" class="footer-link">Features</a></li>
                         <li><a href="index.html" class="footer-link">Products</a></li>
                         <li><a href="index.html" class="footer-link">Resources</a></li>
                         <li><a href="contact-us.html" class="footer-link">Contact Us</a></li>
@@ -510,31 +507,38 @@
                 <button class="modal-close" aria-label="Close contact form">&times;</button>
             </div>
             <p class="modal-subtitle">Fill out the form below and we'll get back to you</p>
-            <form class="contact-form" id="ctaContactForm" autocomplete="off">
+            <form class="contact-form" id="ctaContactForm" autocomplete="off" method="POST" action="javascript:void(0);" onsubmit="event.preventDefault(); return false;">
+                <!-- Honeypot field for spam protection -->
+                <input type="text" name="website" style="display: none;" tabindex="-1" autocomplete="off">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="ctaFirstName" class="form-label">First Name <span class="required">*</span></label>
-                        <input type="text" id="ctaFirstName" name="firstName" class="form-input" placeholder="Enter your first name" autocomplete="given-name" required>
+                        <input type="text" id="ctaFirstName" name="firstName" class="form-input" placeholder="Enter your first name" autocomplete="given-name" pattern="[\p{L}\s]+" title="First name should only contain letters and spaces" required>
+                        <span class="field-error" id="ctaFirstName-error"></span>
                     </div>
                     <div class="form-group">
                         <label for="ctaLastName" class="form-label">Last Name <span class="required">*</span></label>
-                        <input type="text" id="ctaLastName" name="lastName" class="form-input" placeholder="Enter your last name" autocomplete="family-name" required>
+                        <input type="text" id="ctaLastName" name="lastName" class="form-input" placeholder="Enter your last name" autocomplete="family-name" pattern="[\p{L}\s]+" title="Last name should only contain letters and spaces" required>
+                        <span class="field-error" id="ctaLastName-error"></span>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
                         <label for="ctaEmail" class="form-label">Email Address <span class="required">*</span></label>
-                        <input type="email" id="ctaEmail" name="email" class="form-input" placeholder="Enter your email address" autocomplete="email" required>
+                        <input type="email" id="ctaEmail" name="email" class="form-input" placeholder="Enter your email address" autocomplete="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Please enter a valid email address (e.g., name@example.com)" required>
+                        <span class="field-error" id="ctaEmail-error"></span>
                     </div>
                     <div class="form-group">
                         <label for="ctaPhone" class="form-label">Phone Number</label>
-                        <input type="tel" id="ctaPhone" name="phone" class="form-input" placeholder="+971 50 123 4567" autocomplete="tel">
+                        <input type="tel" id="ctaPhone" name="phone" class="form-input" placeholder="+971 50 123 4567" autocomplete="tel" pattern="(\+971|971|0)?[0-9\s\-\(\)]{7,12}" title="Please enter a valid UAE phone number (e.g., +971 50 123 4567 or 050 123 4567)">
+                        <span class="field-error" id="ctaPhone-error"></span>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
                         <label for="ctaCompany" class="form-label">Company Name</label>
                         <input type="text" id="ctaCompany" name="company" class="form-input" placeholder="Enter your company name" autocomplete="organization">
+                        <span class="field-error" id="ctaCompany-error"></span>
                     </div>
                     <div class="form-group">
                         <label for="ctaHelpType" class="form-label">How can we help you? <span class="required">*</span></label>
@@ -546,12 +550,15 @@
                             <option value="partnership">Partnership</option>
                             <option value="other">Other</option>
                         </select>
+                        <span class="field-error" id="ctaHelpType-error"></span>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="ctaMessage" class="form-label">Message <span class="required">*</span></label>
                     <textarea id="ctaMessage" name="message" class="form-textarea" rows="6" placeholder="Tell us more about your requirements..." required></textarea>
+                    <span class="field-error" id="ctaMessage-error"></span>
                 </div>
+                <div class="form-message" id="ctaFormMessage" style="display: none;"></div>
                 <button type="submit" class="form-submit-btn">
                     Send Message
                     <i class="fa-solid fa-paper-plane"></i>

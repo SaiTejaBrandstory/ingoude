@@ -36,7 +36,6 @@
 
             <!-- Desktop Navigation Menu -->
             <nav class="desktop-nav">
-                <a href="index.html#features" class="nav-link">Features</a>
                 <div class="nav-dropdown">
                     <a href="services.html" class="nav-link nav-dropdown-toggle">Services <i class="fa-solid fa-chevron-down" style="font-size: 12px;"></i></a>
                     <div class="nav-dropdown-menu">
@@ -72,7 +71,6 @@
         <!-- Mobile Navigation Menu -->
         <div class="mobile-nav">
             <nav class="mobile-nav-content">
-                <a href="index.html#features" class="mobile-nav-link">Features</a>
                 <details class="mobile-dropdown">
                     <summary class="mobile-nav-link mobile-services-summary">
                         <a href="services.html" class="mobile-services-link">Services</a>
@@ -142,34 +140,41 @@
                     <h2 class="contact-form-title">Send us a Message</h2>
                     <p class="contact-form-subtitle">Fill out the form below and we'll get back to you</p>
                     
-                    <form class="contact-form" id="contactForm" autocomplete="off">
+                    <form class="contact-form" id="contactForm" autocomplete="off" method="POST" action="javascript:void(0);" onsubmit="event.preventDefault(); return false;">
+                        <!-- Honeypot field for spam protection -->
+                        <input type="text" name="website" style="display: none;" tabindex="-1" autocomplete="off">
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="firstName" class="form-label">First Name <span class="required">*</span></label>
-                                <input type="text" id="firstName" name="firstName" class="form-input" placeholder="Enter your first name" autocomplete="given-name" required>
+                                <input type="text" id="firstName" name="firstName" class="form-input" placeholder="Enter your first name" autocomplete="given-name" pattern="[\p{L}\s]+" title="First name should only contain letters and spaces" required>
+                                <span class="field-error" id="firstName-error"></span>
                             </div>
                             
                             <div class="form-group">
                                 <label for="lastName" class="form-label">Last Name <span class="required">*</span></label>
-                                <input type="text" id="lastName" name="lastName" class="form-input" placeholder="Enter your last name" autocomplete="family-name" required>
+                                <input type="text" id="lastName" name="lastName" class="form-input" placeholder="Enter your last name" autocomplete="family-name" pattern="[\p{L}\s]+" title="Last name should only contain letters and spaces" required>
+                                <span class="field-error" id="lastName-error"></span>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="email" class="form-label">Email Address <span class="required">*</span></label>
-                                <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email address" autocomplete="email" required>
+                                <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email address" autocomplete="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Please enter a valid email address (e.g., name@example.com)" required>
+                                <span class="field-error" id="email-error"></span>
                             </div>
                             
                             <div class="form-group">
                                 <label for="phone" class="form-label">Phone Number</label>
-                                <input type="tel" id="phone" name="phone" class="form-input" placeholder="+971 50 123 4567" autocomplete="tel">
+                                <input type="tel" id="phone" name="phone" class="form-input" placeholder="+971 50 123 4567" autocomplete="tel" pattern="(\+971|971|0)?[0-9\s\-\(\)]{7,12}" title="Please enter a valid UAE phone number (e.g., +971 50 123 4567 or 050 123 4567)">
+                                <span class="field-error" id="phone-error"></span>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="company" class="form-label">Company Name</label>
                             <input type="text" id="company" name="company" class="form-input" placeholder="Enter your company name" autocomplete="organization">
+                            <span class="field-error" id="company-error"></span>
                         </div>
 
                         <div class="form-group">
@@ -182,18 +187,303 @@
                                 <option value="partnership">Partnership</option>
                                 <option value="other">Other</option>
                             </select>
+                            <span class="field-error" id="helpType-error"></span>
                         </div>
 
                         <div class="form-group">
                             <label for="message" class="form-label">Message <span class="required">*</span></label>
                             <textarea id="message" name="message" class="form-textarea" rows="6" placeholder="Tell us more about your requirements..." required></textarea>
+                            <span class="field-error" id="message-error"></span>
                         </div>
 
+                        <div class="form-message" id="formMessage" style="display: none;"></div>
                         <button type="submit" class="form-submit-btn">
                             Send Message
                             <i class="fa-solid fa-paper-plane"></i>
                         </button>
                     </form>
+                    
+                    <!-- Inline script to handle form submission -->
+                    <script>
+                        (function() {
+                            // Wait for DOM to be fully ready
+                            if (document.readyState === 'loading') {
+                                document.addEventListener('DOMContentLoaded', initForm);
+                            } else {
+                                initForm();
+                            }
+                            
+                            function initForm() {
+                                var form = document.getElementById('contactForm');
+                                if (!form) {
+                                    console.error('Form not found!');
+                                    return;
+                                }
+                                
+                                console.log('Form found, attaching handler...');
+                                
+                                // Add submit handler directly (no need to clone)
+                                form.addEventListener('submit', handleSubmit, false);
+                                
+                                // Also add click handler to button as backup
+                                var submitButton = form.querySelector('button[type="submit"]');
+                                if (submitButton) {
+                                    submitButton.addEventListener('click', function(e) {
+                                        console.log('Button clicked');
+                                        // Let the form submit event handle it
+                                    }, false);
+                                }
+                                
+                                // Add real-time validation - clear errors when user types
+                                var formInputs = form.querySelectorAll('.form-input, .form-select, .form-textarea');
+                                formInputs.forEach(function(input) {
+                                    input.addEventListener('input', function() {
+                                        var fieldName = this.id;
+                                        var errorSpan = document.getElementById(fieldName + '-error');
+                                        if (errorSpan) {
+                                            errorSpan.textContent = '';
+                                            errorSpan.style.display = 'none';
+                                        }
+                                        this.classList.remove('input-error');
+                                    });
+                                    
+                                    input.addEventListener('change', function() {
+                                        var fieldName = this.id;
+                                        var errorSpan = document.getElementById(fieldName + '-error');
+                                        if (errorSpan) {
+                                            errorSpan.textContent = '';
+                                            errorSpan.style.display = 'none';
+                                        }
+                                        this.classList.remove('input-error');
+                                    });
+                                });
+                                
+                                function handleSubmit(e) {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    e.stopImmediatePropagation();
+                                    
+                                    // Check if form is already being submitted (prevent duplicate submissions)
+                                    if (form.dataset.submitting === 'true') {
+                                        console.log('Form is already being submitted, ignoring duplicate submission');
+                                        return false;
+                                    }
+                                    
+                                    // Mark form as submitting
+                                    form.dataset.submitting = 'true';
+                                    console.log('Form submit event triggered!');
+                                    
+                                    // Get form data
+                                    var formData = new FormData(form);
+                                    var submitBtn = form.querySelector('button[type="submit"]');
+                                    if (!submitBtn) {
+                                        console.error('Submit button not found');
+                                        return false;
+                                    }
+                                    
+                                    var originalButtonText = submitBtn.innerHTML;
+                                    
+                                    // Show loading state - make button clearly disabled
+                                    submitBtn.disabled = true;
+                                    submitBtn.setAttribute('disabled', 'disabled');
+                                    submitBtn.style.cursor = 'not-allowed';
+                                    submitBtn.style.opacity = '0.5';
+                                    submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+                                    console.log('Sending form data...');
+                                    
+                                    // Get message container
+                                    var messageContainer = document.getElementById('formMessage') || form.querySelector('.form-message');
+                                    if (!messageContainer) {
+                                        messageContainer = document.createElement('div');
+                                        messageContainer.className = 'form-message';
+                                        messageContainer.id = 'formMessage';
+                                        submitBtn.parentElement.insertBefore(messageContainer, submitBtn);
+                                    }
+                                    messageContainer.style.display = 'none';
+                                    messageContainer.dataset.successShown = 'false'; // Reset flag on new submission attempt
+                                    messageContainer.innerHTML = ''; // Clear previous content
+                                    
+                                    // Send form data
+                                    fetch('send-email.php', {
+                                        method: 'POST',
+                                        body: formData
+                                    })
+                                    .then(function(response) {
+                                        console.log('Response received:', response.status);
+                                        return response.json();
+                                    })
+                                    .then(function(data) {
+                                        console.log('Response data:', data);
+                                        console.log('Has fieldErrors?', !!data.fieldErrors);
+                                        console.log('fieldErrors content:', data.fieldErrors);
+                                        if (data.success) {
+                                            // Check if success message was already shown (prevent duplicate displays)
+                                            if (messageContainer.dataset.successShown === 'true') {
+                                                return; // Don't show success message again
+                                            }
+                                            
+                                            // Mark that success message has been shown
+                                            messageContainer.dataset.successShown = 'true';
+                                            
+                                            // Show success message with centered wrapper
+                                            messageContainer.className = 'form-message form-message-success';
+                                            messageContainer.innerHTML = '<div style="text-align: center; width: 100%; display: flex; justify-content: center; align-items: center;"><span style="display: inline-block; background-color: #cce8cc; color: #000000; padding: 12px 20px; border-radius: 8px; font-size: 16px; font-weight: 500; text-align: center;"><i class="fa-solid fa-check-circle"></i> ' + data.message + '</span></div>';
+                                            
+                                            // Set container styles for centering
+                                            messageContainer.style.display = 'block';
+                                            messageContainer.style.width = '100%';
+                                            messageContainer.style.textAlign = 'center';
+                                            messageContainer.style.opacity = '1';
+                                            messageContainer.style.transition = 'opacity 0.5s ease-out';
+                                            
+                                            // Clear all field errors on success
+                                            var allErrorSpans = form.querySelectorAll('.field-error');
+                                            allErrorSpans.forEach(function(span) {
+                                                span.textContent = '';
+                                                span.style.display = 'none';
+                                            });
+                                            
+                                            // Remove error classes from inputs
+                                            var allInputs = form.querySelectorAll('.form-input, .form-select, .form-textarea');
+                                            allInputs.forEach(function(input) {
+                                                input.classList.remove('input-error');
+                                            });
+                                            
+                                            // Reset form
+                                            form.reset();
+                                            
+                                            // Scroll to message to ensure it's visible
+                                            setTimeout(function() {
+                                                messageContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                            }, 100);
+                                            
+                                            // Fade out message after 4 seconds
+                                            setTimeout(function() {
+                                                messageContainer.style.opacity = '0';
+                                                setTimeout(function() {
+                                                    messageContainer.style.display = 'none';
+                                                    // Reset the flag after message is hidden so it can show again on next successful submission
+                                                    messageContainer.dataset.successShown = 'false';
+                                                }, 500); // Wait for fade-out transition to complete
+                                            }, 4000);
+                                        } else {
+                                            // Clear all previous field errors
+                                            var allErrorSpans = form.querySelectorAll('.field-error');
+                                            allErrorSpans.forEach(function(span) {
+                                                span.textContent = '';
+                                                span.style.display = 'none';
+                                                span.classList.remove('show');
+                                            });
+                                            
+                                            // Remove error classes from inputs
+                                            var allInputs = form.querySelectorAll('.form-input, .form-select, .form-textarea');
+                                            allInputs.forEach(function(input) {
+                                                input.classList.remove('input-error');
+                                            });
+                                            
+                                            // Show field-specific errors if available
+                                            if (data.fieldErrors && Object.keys(data.fieldErrors).length > 0) {
+                                                console.log('Processing field errors:', data.fieldErrors);
+                                                // Hide general message container
+                                                messageContainer.style.display = 'none';
+                                                
+                                                // Show errors below each field
+                                                for (var fieldName in data.fieldErrors) {
+                                                    console.log('Processing field:', fieldName, 'Error:', data.fieldErrors[fieldName]);
+                                                    var errorSpan = document.getElementById(fieldName + '-error');
+                                                    var inputField = document.getElementById(fieldName);
+                                                    
+                                                    console.log('Error span found:', errorSpan, 'Input field found:', inputField);
+                                                    
+                                                    if (errorSpan && inputField) {
+                                                        errorSpan.textContent = data.fieldErrors[fieldName];
+                                                        errorSpan.style.setProperty('display', 'block', 'important');
+                                                        errorSpan.style.setProperty('visibility', 'visible', 'important');
+                                                        errorSpan.style.setProperty('color', '#EF4444', 'important');
+                                                        errorSpan.style.setProperty('font-size', '14px', 'important');
+                                                        errorSpan.style.setProperty('margin-top', '6px', 'important');
+                                                        errorSpan.style.setProperty('line-height', '1.4', 'important');
+                                                        errorSpan.style.setProperty('opacity', '1', 'important');
+                                                        errorSpan.classList.add('show');
+                                                        inputField.classList.add('input-error');
+                                                        console.log('Error displayed for:', fieldName, 'Text:', data.fieldErrors[fieldName]);
+                                                    } else {
+                                                        console.error('Could not find error span or input for:', fieldName);
+                                                        // Try to find within form as fallback
+                                                        if (!errorSpan) {
+                                                            errorSpan = form.querySelector('#' + fieldName + '-error');
+                                                            console.log('Found error span in form:', errorSpan);
+                                                        }
+                                                        if (!inputField) {
+                                                            inputField = form.querySelector('#' + fieldName);
+                                                            console.log('Found input in form:', inputField);
+                                                        }
+                                                        if (errorSpan && inputField) {
+                                                            errorSpan.textContent = data.fieldErrors[fieldName];
+                                                            errorSpan.style.setProperty('display', 'block', 'important');
+                                                            errorSpan.style.setProperty('visibility', 'visible', 'important');
+                                                            errorSpan.style.setProperty('color', '#EF4444', 'important');
+                                                            errorSpan.style.setProperty('font-size', '14px', 'important');
+                                                            errorSpan.style.setProperty('margin-top', '6px', 'important');
+                                                            errorSpan.style.setProperty('line-height', '1.4', 'important');
+                                                            errorSpan.style.setProperty('opacity', '1', 'important');
+                                                            errorSpan.classList.add('show');
+                                                            inputField.classList.add('input-error');
+                                                            console.log('Error displayed for:', fieldName, '(found via fallback)');
+                                                        }
+                                                    }
+                                                }
+                                                
+                                                // Scroll to first error field
+                                                var firstError = form.querySelector('.input-error');
+                                                if (firstError) {
+                                                    setTimeout(function() {
+                                                        firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                                        firstError.focus();
+                                                    }, 100);
+                                                }
+                                            } else {
+                                                console.log('No fieldErrors found, showing general error message');
+                                                // Show general error message only if no field errors
+                                                messageContainer.className = 'form-message form-message-error';
+                                                var errorMsg = data.message || 'An error occurred. Please try again.';
+                                                if (data.errors && data.errors.length > 0) {
+                                                    errorMsg += '<ul style="margin: 10px 0 0 20px; text-align: left;">';
+                                                    data.errors.forEach(function(error) {
+                                                        errorMsg += '<li>' + error + '</li>';
+                                                    });
+                                                    errorMsg += '</ul>';
+                                                }
+                                                messageContainer.innerHTML = '<i class="fa-solid fa-exclamation-circle"></i> ' + errorMsg;
+                                                messageContainer.style.display = 'block';
+                                                messageContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                            }
+                                        }
+                                    })
+                                    .catch(function(error) {
+                                        console.error('Fetch error:', error);
+                                        messageContainer.className = 'form-message form-message-error';
+                                        messageContainer.innerHTML = '<i class="fa-solid fa-exclamation-circle"></i> Network error. Please check your connection and try again.';
+                                        messageContainer.style.display = 'block';
+                                        messageContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                    })
+                                    .finally(function() {
+                                        // Re-enable submit button and reset submitting flag
+                                        submitBtn.disabled = false;
+                                        submitBtn.removeAttribute('disabled');
+                                        submitBtn.style.cursor = 'pointer';
+                                        submitBtn.style.opacity = '1';
+                                        submitBtn.innerHTML = originalButtonText;
+                                        form.dataset.submitting = 'false'; // Allow new submissions
+                                    });
+                                    
+                                    return false;
+                                }
+                                
+                                console.log('Form handler attached successfully');
+                            }
+                        })();
+                    </script>
                 </div>
             </div>
         </section>
@@ -232,7 +522,6 @@
                     <h3 class="footer-column-title">Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="index.html" class="footer-link">Home</a></li>
-                        <li><a href="index.html#features" class="footer-link">Features</a></li>
                         <li><a href="index.html" class="footer-link">Products</a></li>
                         <li><a href="index.html" class="footer-link">Resources</a></li>
                         <li><a href="contact-us.html" class="footer-link">Contact Us</a></li>
@@ -276,7 +565,19 @@
     </footer>
 
     <!-- JavaScript -->
+    <script>
+        // Check if script.js loaded
+        console.log('Page loaded, checking script.js...');
+    </script>
     <script src="script.js"></script>
+    <script>
+        // Verify script loaded
+        if (typeof handleContactFormSubmission === 'function') {
+            console.log('✓ handleContactFormSubmission function is available');
+        } else {
+            console.error('✗ handleContactFormSubmission function NOT found - script.js may not have loaded');
+        }
+    </script>
 </body>
 </html>
 

@@ -1110,6 +1110,145 @@ input[type="tel"]::-webkit-credentials-auto-fill-button {
     font-size: 16px;
 }
 
+/* Form Message Styles */
+.form-message {
+    padding: 0;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    display: none;
+    font-family: Inter;
+    font-size: 14px;
+    line-height: 1.5;
+    animation: slideDown 0.3s ease-out;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    text-align: center;
+}
+
+.form-message {
+    text-align: center !important;
+    width: 100% !important;
+    margin-bottom: 20px;
+    display: block !important;
+}
+
+.form-message > div {
+    text-align: center !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.form-message-success {
+    background-color: transparent !important;
+    color: #000000 !important;
+    border: none !important;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0 !important;
+    box-shadow: none;
+    text-align: center !important;
+    display: block !important;
+    margin: 0 auto !important;
+    border-radius: 0 !important;
+    width: 100% !important;
+    transition: opacity 0.5s ease-out;
+}
+
+.form-message-success > div > span {
+    display: inline-block !important;
+    background-color: #cce8cc !important;
+    color: #000000 !important;
+    padding: 12px 20px !important;
+    border-radius: 8px !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    text-align: center !important;
+}
+
+.form-message-error {
+    background-color: #FEE2E2;
+    color: #991B1B;
+    border: 1px solid #EF4444;
+}
+
+.form-message i {
+    margin-right: 8px;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.form-message-success i {
+    color: #000000;
+}
+
+.form-message ul {
+    margin: 10px 0 0 20px;
+    text-align: left;
+}
+
+.form-message ul li {
+    margin: 5px 0;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Disabled button state */
+.form-submit-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+    background: #9CA3AF !important;
+    background: linear-gradient(90deg, #9CA3AF 0%, #6B7280 100%) !important;
+}
+
+/* Field Error Styles */
+.field-error {
+    display: none !important;
+    color: #EF4444 !important;
+    font-size: 14px !important;
+    margin-top: 6px !important;
+    line-height: 1.4 !important;
+    font-family: Inter !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+.field-error.show {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Input Error State */
+.form-input.input-error,
+.form-select.input-error,
+.form-textarea.input-error {
+    border-color: #EF4444 !important;
+    border-width: 2px !important;
+    border-style: solid !important;
+}
+
+.form-input.input-error:focus,
+.form-select.input-error:focus,
+.form-textarea.input-error:focus {
+    outline-color: #EF4444 !important;
+    border-color: #EF4444 !important;
+    border-width: 2px !important;
+    border-style: solid !important;
+}
+
 /* Contact Form Responsive */
 @media (max-width: 767px) {
     .contact-form-container {
@@ -1299,6 +1438,43 @@ input[type="tel"]::-webkit-credentials-auto-fill-button {
 .pricing-card.popular .pricing-card-period {
   color: #e0f2fe;
 }
+.pricing-features-section {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+.pricing-features-title {
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 14px;
+  color: #0F172A;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.pricing-card.popular .pricing-features-title {
+  color: #fff;
+}
+.pricing-usage-section {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #E5E7EB;
+}
+.pricing-card.popular .pricing-usage-section {
+  border-top-color: rgba(255, 255, 255, 0.2);
+}
+.pricing-usage-title {
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 14px;
+  color: #0F172A;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.pricing-card.popular .pricing-usage-title {
+  color: #fff;
+}
 .pricing-list {
   width: 100%;
   text-align: left;
@@ -1312,21 +1488,26 @@ input[type="tel"]::-webkit-credentials-auto-fill-button {
   color: #000;
   margin-bottom: 9px;
   position: relative;
-  padding-left: 0;
+  padding-left: 27px;
   letter-spacing: 0;
   text-align: left;
   white-space: normal;
   display: block;
 }
+.pricing-list li .pricing-check {
+  position: absolute;
+  left: 0;
+  top: 3px;
+  margin: 0;
+  color: #86EFAC;
+  font-size: 18px;
+  display: inline-block;
+}
 .pricing-card.popular .pricing-list li {
   color: #fff;
 }
-.pricing-check {
-  color: #86EFAC;
-  font-size: 18px;
-  margin-right: 9px;
-  vertical-align: middle;
-  display: inline-block;
+.pricing-card.popular .pricing-list li .pricing-check {
+  color: #fff;
 }
 .pricing-btn {
   font-family: Inter;

@@ -36,7 +36,6 @@
 
             <!-- Desktop Navigation Menu -->
             <nav class="desktop-nav">
-                <a href="index.html#features" class="nav-link">Features</a>
                 <div class="nav-dropdown">
                     <a href="services.html" class="nav-link nav-dropdown-toggle">Services <i class="fa-solid fa-chevron-down" style="font-size: 12px;"></i></a>
                     <div class="nav-dropdown-menu">
@@ -72,7 +71,6 @@
         <!-- Mobile Navigation Menu -->
         <div class="mobile-nav">
             <nav class="mobile-nav-content">
-                <a href="index.html#features" class="mobile-nav-link">Features</a>
                 <details class="mobile-dropdown">
                     <summary class="mobile-nav-link mobile-services-summary">
                         <a href="services.html" class="mobile-services-link">Services</a>
@@ -445,63 +443,89 @@
         <section class="conversalq-pricing">
             <div class="pricing-container">
                 <div class="pricing-header">
-                    <h2 class="pricing-title">Simple, Transparent Pricing</h2>
-                    <p class="pricing-subtitle">Choose the plan that fits your business needs. All plans include our core AI-powered conversation analysis features.</p>
+                    <h2 class="pricing-title">Pricing Plans</h2>
+                    <p class="pricing-subtitle">Choose the perfect plan for your insurance brokerage</p>
                 </div>
                 <div class="pricing-grid">
                     <!-- Starter -->
                     <div class="pricing-card">
                         <div class="pricing-card-header">
                             <div class="pricing-card-title">Starter</div>
-                            <div class="pricing-card-desc">Perfect for small teams getting started</div>
+                            <div class="pricing-card-desc">New or small brokers (1–3 staff)</div>
                         </div>
-                        <div class="pricing-card-price">$99</div>
-                        <div class="pricing-card-period">per month</div>
-                        <ul class="pricing-list">
-                            <li><i class="fa-solid fa-check pricing-check"></i> Up to 1,000 conversations/month</li>
-                            <li><i class="fa-solid fa-check pricing-check"></i> Basic sentiment analysis</li>
-                            <li><i class="fa-solid fa-check pricing-check"></i> Real-time insights</li>
-                            <li><i class="fa-solid fa-check pricing-check"></i> Email support</li>
-                            <li><i class="fa-solid fa-check pricing-check"></i> Basic integrations</li>
-                        </ul>
-                        <button class="pricing-btn open-contact-modal">Choose Plan</button>
+                        <div class="pricing-card-price">AED 499</div>
+                        <div class="pricing-card-period">/user/month</div>
+                        <div class="pricing-features-section">
+                            <div class="pricing-features-title">Features Included</div>
+                            <ul class="pricing-list">
+                                <li><i class="fa-solid fa-check pricing-check"></i> Pipeline Management</li>
+                                <li><i class="fa-solid fa-check pricing-check"></i> Sales Management (Leads and Contacts)</li>
+                                <li><i class="fa-solid fa-check pricing-check"></i> Quote, policy management, endorsements, renewals</li>
+                                <li><i class="fa-solid fa-check pricing-check"></i> Email quotes & policy issuance</li>
+                                <li><i class="fa-solid fa-check pricing-check"></i> Renewal reminders</li>
+                                <li><i class="fa-solid fa-check pricing-check"></i> Analytics, reports, management dashboard</li>
+                                <li><i class="fa-solid fa-check pricing-check"></i> WhatsApp/Sms integration</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-usage-section">
+                            <div class="pricing-usage-title">USAGE LIMITS</div>
+                            <ul class="pricing-list">
+                                <li><i class="fa-solid fa-check pricing-check"></i> Up to 5G of document storage</li>
+                            </ul>
+                        </div>
+                        <button class="pricing-btn open-contact-modal" data-plan="Starter">GET STARTED</button>
                     </div>
-                    <!-- Professional -->
+                    <!-- Growth -->
                     <div class="pricing-card popular">
                         <div class="pricing-popular">Most Popular</div>
                         <div class="pricing-card-header">
-                            <div class="pricing-card-title">Professional</div>
-                            <div class="pricing-card-desc">Ideal for growing businesses</div>
+                            <div class="pricing-card-title">Growth</div>
+                            <div class="pricing-card-desc">Mid-sized brokers (4–10 staff)</div>
                         </div>
-                        <div class="pricing-card-price">$299</div>
-                        <div class="pricing-card-period">per month</div>
-                        <ul class="pricing-list">
-                            <li><i class="fa-solid fa-check pricing-check"></i> Up to 10,000 conversations/month</li>
-                            <li><i class="fa-solid fa-check pricing-check"></i> Advanced AI analytics</li>
-                            <li><i class="fa-solid fa-check pricing-check"></i> Custom dashboards</li>
-                            <li><i class="fa-solid fa-check pricing-check"></i> Priority support</li>
-                            <li><i class="fa-solid fa-check pricing-check"></i> Advanced integrations</li>
-                            <li><i class="fa-solid fa-check pricing-check"></i> Team collaboration tools</li>
-                        </ul>
-                        <button class="pricing-btn open-contact-modal">Choose Plan</button>
+                        <div class="pricing-card-price">AED 999</div>
+                        <div class="pricing-card-period">/user/month</div>
+                        <div class="pricing-features-section">
+                            <div class="pricing-features-title">Everything in Starter, plus</div>
+                            <ul class="pricing-list">
+                                <li><i class="fa-solid fa-check pricing-check"></i> 5 product/insurer API integrations</li>
+                                <li><i class="fa-solid fa-check pricing-check"></i> White-label broker portal</li>
+                                <li><i class="fa-solid fa-check pricing-check"></i> Payment gateway integration (credit card, Apple Pay)</li>
+                                <li><i class="fa-solid fa-check pricing-check"></i> Team performance dashboard</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-usage-section">
+                            <div class="pricing-usage-title">USAGE LIMITS</div>
+                            <ul class="pricing-list">
+                                <li><i class="fa-solid fa-check pricing-check"></i> Up to 5G of document storage</li>
+                            </ul>
+                        </div>
+                        <button class="pricing-btn open-contact-modal" data-plan="Growth">START FREE TRIAL</button>
                     </div>
                     <!-- Enterprise -->
                     <div class="pricing-card">
                         <div class="pricing-card-header">
                             <div class="pricing-card-title">Enterprise</div>
-                            <div class="pricing-card-desc">For large-scale operations</div>
+                            <div class="pricing-card-desc">Large brokers with high volume or multiple branches</div>
                         </div>
-                        <div class="pricing-card-price">Custom</div>
-                        <div class="pricing-card-period">pricing</div>
-                        <ul class="pricing-list">
-                            <li><i class="fa-solid fa-check pricing-check"></i> Unlimited conversations</li>
-                            <li><i class="fa-solid fa-check pricing-check"></i> Custom AI models</li>
-                            <li><i class="fa-solid fa-check pricing-check"></i> White-label options</li>
-                            <li><i class="fa-solid fa-check pricing-check"></i> 24/7 dedicated support</li>
-                            <li><i class="fa-solid fa-check pricing-check"></i> Custom integrations</li>
-                            <li><i class="fa-solid fa-check pricing-check"></i> On-premise deployment</li>
-                        </ul>
-                        <button class="pricing-btn open-contact-modal">Choose Plan</button>
+                        <div class="pricing-card-price">Custom Pricing</div>
+                        <div class="pricing-card-period">(Starting from AED 7,000+)</div>
+                        <div class="pricing-features-section">
+                            <div class="pricing-features-title">Everything in Growth, plus</div>
+                            <ul class="pricing-list">
+                                <li><i class="fa-solid fa-check pricing-check"></i> Unlimited policies & users</li>
+                                <li><i class="fa-solid fa-check pricing-check"></i> Dedicated account manager</li>
+                                <li><i class="fa-solid fa-check pricing-check"></i> Custom API development</li>
+                                <li><i class="fa-solid fa-check pricing-check"></i> Advanced analytics & AI-powered renewal reminders</li>
+                                <li><i class="fa-solid fa-check pricing-check"></i> On-premise or UAE-based cloud hosting</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-usage-section">
+                            <div class="pricing-usage-title">USAGE LIMITS</div>
+                            <ul class="pricing-list">
+                                <li><i class="fa-solid fa-check pricing-check"></i> Unlimited</li>
+                            </ul>
+                        </div>
+                        <button class="pricing-btn open-contact-modal" data-plan="Enterprise">CONTACT SALES</button>
                     </div>
                 </div>
             </div>
@@ -541,7 +565,6 @@
                     <h3 class="footer-column-title">Quick Links</h3>
                     <ul class="footer-links">
                         <li><button class="footer-link">Home</button></li>
-                        <li><a href="index.html#features" class="footer-link">Features</a></li>
                         <li><button class="footer-link">Products</button></li>
                         <li><button class="footer-link">Resources</button></li>
                         <li><a href="contact-us.html" class="footer-link">Contact Us</a></li>
@@ -592,31 +615,38 @@
                 <button class="modal-close" aria-label="Close contact form">&times;</button>
             </div>
             <p class="modal-subtitle">Fill out the form below and we'll get back to you</p>
-            <form class="contact-form" id="ctaContactForm" autocomplete="off">
+            <form class="contact-form" id="ctaContactForm" autocomplete="off" method="POST" action="javascript:void(0);" onsubmit="event.preventDefault(); return false;">
+                <!-- Honeypot field for spam protection -->
+                <input type="text" name="website" style="display: none;" tabindex="-1" autocomplete="off">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="ctaFirstName" class="form-label">First Name <span class="required">*</span></label>
-                        <input type="text" id="ctaFirstName" name="firstName" class="form-input" placeholder="Enter your first name" autocomplete="given-name" required>
+                        <input type="text" id="ctaFirstName" name="firstName" class="form-input" placeholder="Enter your first name" autocomplete="given-name" pattern="[\p{L}\s]+" title="First name should only contain letters and spaces" required>
+                        <span class="field-error" id="ctaFirstName-error"></span>
                     </div>
                     <div class="form-group">
                         <label for="ctaLastName" class="form-label">Last Name <span class="required">*</span></label>
-                        <input type="text" id="ctaLastName" name="lastName" class="form-input" placeholder="Enter your last name" autocomplete="family-name" required>
+                        <input type="text" id="ctaLastName" name="lastName" class="form-input" placeholder="Enter your last name" autocomplete="family-name" pattern="[\p{L}\s]+" title="Last name should only contain letters and spaces" required>
+                        <span class="field-error" id="ctaLastName-error"></span>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
                         <label for="ctaEmail" class="form-label">Email Address <span class="required">*</span></label>
-                        <input type="email" id="ctaEmail" name="email" class="form-input" placeholder="Enter your email address" autocomplete="email" required>
+                        <input type="email" id="ctaEmail" name="email" class="form-input" placeholder="Enter your email address" autocomplete="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Please enter a valid email address (e.g., name@example.com)" required>
+                        <span class="field-error" id="ctaEmail-error"></span>
                     </div>
                     <div class="form-group">
                         <label for="ctaPhone" class="form-label">Phone Number</label>
-                        <input type="tel" id="ctaPhone" name="phone" class="form-input" placeholder="+971 50 123 4567" autocomplete="tel">
+                        <input type="tel" id="ctaPhone" name="phone" class="form-input" placeholder="+971 50 123 4567" autocomplete="tel" pattern="(\+971|971|0)?[0-9\s\-\(\)]{7,12}" title="Please enter a valid UAE phone number (e.g., +971 50 123 4567 or 050 123 4567)">
+                        <span class="field-error" id="ctaPhone-error"></span>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
                         <label for="ctaCompany" class="form-label">Company Name</label>
                         <input type="text" id="ctaCompany" name="company" class="form-input" placeholder="Enter your company name" autocomplete="organization">
+                        <span class="field-error" id="ctaCompany-error"></span>
                     </div>
                     <div class="form-group">
                         <label for="ctaHelpType" class="form-label">How can we help you? <span class="required">*</span></label>
@@ -628,12 +658,15 @@
                             <option value="partnership">Partnership</option>
                             <option value="other">Other</option>
                         </select>
+                        <span class="field-error" id="ctaHelpType-error"></span>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="ctaMessage" class="form-label">Message <span class="required">*</span></label>
                     <textarea id="ctaMessage" name="message" class="form-textarea" rows="6" placeholder="Tell us more about your requirements..." required></textarea>
+                    <span class="field-error" id="ctaMessage-error"></span>
                 </div>
+                <div class="form-message" id="ctaFormMessage" style="display: none;"></div>
                 <button type="submit" class="form-submit-btn">
                     Send Message
                     <i class="fa-solid fa-paper-plane"></i>
