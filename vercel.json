@@ -6,12 +6,6 @@
       "use": "@vercel/php"
     }
   ],
-  "routes": [
-    {
-      "src": "/send-email.php",
-      "dest": "/send-email.php"
-    }
-  ],
   "rewrites": [
     { "source": "/", "destination": "/index.html" },
     { "source": "/banking-services", "destination": "/banking-services.html" },
