@@ -457,6 +457,15 @@ function initializeContactModal() {
         });
     }
 
+    // Open modal from hero Contact Us button
+    const heroContactBtn = document.getElementById('heroContactBtn');
+    if (heroContactBtn) {
+        heroContactBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal(); // No plan selected for hero Contact Us button
+        });
+    }
+
     // Open modal from all "Choose Plan" buttons (pricing section)
     const pricingButtons = document.querySelectorAll('.open-contact-modal');
     pricingButtons.forEach(button => {
