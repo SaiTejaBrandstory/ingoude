@@ -1,13 +1,44 @@
 {
   "version": 2,
-  "rewrites": [
-    { "source": "/", "destination": "/index.html" },
-    { "source": "/banking-services", "destination": "/banking-services.html" },
-    { "source": "/services", "destination": "/services.html" },
-    { "source": "/financial-services", "destination": "/financial-services.html" },
-    { "source": "/insurance-services", "destination": "/insurance-services.html" },
-    { "source": "/contact-us", "destination": "/contact-us.html" },
-    { "source": "/conversalq", "destination": "/conversalq.html" }
+  "builds": [
+    {
+      "src": "*.php",
+      "use": "@vercel/php"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/send-email.php",
+      "dest": "/send-email.php"
+    },
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/banking-services",
+      "destination": "/banking-services.html"
+    },
+    {
+      "source": "/services",
+      "destination": "/services.html"
+    },
+    {
+      "source": "/financial-services",
+      "destination": "/financial-services.html"
+    },
+    {
+      "source": "/insurance-services",
+      "destination": "/insurance-services.html"
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/contact-us.html"
+    },
+    {
+      "source": "/conversalq",
+      "destination": "/conversalq.html"
+    }
   ],
   "headers": [
     {
